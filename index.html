@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SocialSnatch Pro - Download Media from Any Platform</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-gray-100 min-h-screen">
+    <custom-navbar></custom-navbar>
+    
+    <main class="container mx-auto px-4 py-12">
+        <div class="max-w-4xl mx-auto text-center mb-12">
+            <h1 class="text-4xl md:text-6xl font-bold text-gray-900 mb-4">SocialSnatch Pro</h1>
+            <p class="text-xl text-gray-600">Download videos, images, and audio from YouTube, TikTok, Instagram, Facebook, and X (Twitter)</p>
+        </div>
+
+        <div class="bg-white rounded-xl shadow-lg p-6 mb-12">
+            <form id="downloadForm" class="space-y-4">
+                <div class="flex flex-col md:flex-row gap-4">
+                    <input type="url" id="mediaUrl" placeholder="Paste link here..." 
+                        class="flex-grow px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                    <button type="submit" 
+                        class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition-colors">
+                        Download
+                    </button>
+                </div>
+                <div class="flex flex-wrap justify-center gap-4 pt-4">
+                    <div class="platform-card" data-platform="youtube">
+                        <i class="fab fa-youtube text-red-600 text-3xl"></i>
+                        <span>YouTube</span>
+                    </div>
+                    <div class="platform-card" data-platform="tiktok">
+                        <i class="fab fa-tiktok text-black text-3xl"></i>
+                        <span>TikTok</span>
+                    </div>
+                    <div class="platform-card" data-platform="instagram">
+                        <i class="fab fa-instagram text-pink-600 text-3xl"></i>
+                        <span>Instagram</span>
+                    </div>
+                    <div class="platform-card" data-platform="facebook">
+                        <i class="fab fa-facebook text-blue-600 text-3xl"></i>
+                        <span>Facebook</span>
+                    </div>
+                    <div class="platform-card" data-platform="twitter">
+                        <i class="fab fa-twitter text-blue-400 text-3xl"></i>
+                        <span>Twitter/X</span>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <div id="results" class="hidden">
+            <h2 class="text-2xl font-bold mb-6">Download Options</h2>
+            <div id="qualityOptions" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"></div>
+        </div>
+    </main>
+
+    <custom-footer></custom-footer>
+    
+    <script src="components/navbar.js"></script>
+    <script src="components/footer.js"></script>
+    <script src="script.js"></script>
+<script src="https://huggingface.co/deepsite/deepsite-badge.js"></script>
+</body>
+</html>

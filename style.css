@@ -1,0 +1,19 @@
+.platform-card {
+    @apply flex flex-col items-center justify-center p-4 w-24 h-24 rounded-lg border border-gray-200 cursor-pointer hover:bg-gray-50 transition-colors;
+}
+
+.platform-card.active {
+    @apply bg-blue-50 border-blue-300;
+}
+
+#results {
+    @apply bg-white rounded-xl shadow-lg p-6;
+}
+
+.download-option {
+    @apply p-4 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors;
+}
+
+.download-option h3 {
+    @apply font-medium text-lg mb-2;
+}
